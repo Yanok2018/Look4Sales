@@ -18,6 +18,7 @@ namespace kur2
         public Product()
         {
             this.Orders = new HashSet<Order>();
+            this.Users = new HashSet<User>();
         }
     
         public int ProductId { get; set; }
@@ -30,5 +31,7 @@ namespace kur2
         public virtual ICollection<Order> Orders { get; set; }
         public virtual Product_List Product_List { get; set; }
         public virtual Site Site { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> Users { get; set; }
     }
 }

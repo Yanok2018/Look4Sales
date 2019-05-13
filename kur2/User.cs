@@ -23,8 +23,10 @@ namespace kur2
         public int UserId { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public Nullable<int> Favorites { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

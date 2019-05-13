@@ -10,7 +10,7 @@ namespace kur2
     {
         static void Main(string[] args)
         {
-            using (CourseworkEntities db = new CourseworkEntities())
+            using (CourseworkEntities6 db = new CourseworkEntities6())
             {
                 List<NewUser> newusers = new List<NewUser>();
                 var users = db.Users;
@@ -20,8 +20,17 @@ namespace kur2
                     nu.id = u.UserId;
                     nu.mail = u.Email;
                     nu.password = u.Password;
+                    nu.favorites = u.Favorites;
                     newusers.Add(nu);
-                    Console.WriteLine($"{u.UserId} {u.Email} {u.Password}");
+                    /** if (nu.favorites == null && u.Favorites == null)
+                    {
+                        Console.WriteLine($"{u.UserId} {u.Email} {u.Password} {"Нету избранных товаров"}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{u.UserId} {u.Email} {u.Password} {u.Favorites}");
+                    }*/
+                    Console.WriteLine($"{u.UserId} {u.Email} {u.Password} {u.Favorites}");
                 }
 
                 List<NewProduct> newproduct = new List<NewProduct>();
@@ -75,19 +84,20 @@ namespace kur2
             Console.Clear();
             Methods m = new Methods();
             Console.WriteLine("Test");
-        /// Console.WriteLine("Add user");
-        /// m.AddUsers("qqq@gmail.com", "111");
-        /// m.AddUsers("test3", "111");
-        ///   m.AddUsers("test4", "111");
-        ///   m.AddUsers("test5", "111");
-        ///   m.AddUsers("test6", "111");
+            /// Console.WriteLine("Add user");
+            /// m.AddUsers("qqq@gmail.com", "111");
+            /// m.AddUsers("test3", "111");
+            ///   m.AddUsers("test4", "111");
+            ///   m.AddUsers("test5", "111");
+            ///   m.AddUsers("test6", "111");
+            m.AddUsers("test8", "111", null);
             Console.WriteLine("Add site");
             m.AddSites("httprf");
             m.AddSites("htt2");
             Console.WriteLine("Add product");
-            m.AddProducts("Phone", "Test", 1000,16);
+            m.AddProducts("Phone", "Test", 1000,1);
             Console.WriteLine("Del user");
-            m.DeleteUser("test5");
+          //  m.DeleteUser("test5");
         }
     }
 }

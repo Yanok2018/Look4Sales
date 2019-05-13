@@ -13,10 +13,10 @@ namespace kur2
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CourseworkEntities : DbContext
+    public partial class CourseworkEntities6 : DbContext
     {
-        public CourseworkEntities()
-            : base("name=CourseworkEntities")
+        public CourseworkEntities6()
+            : base("name=CourseworkEntities6")
         {
         }
     

@@ -11,5 +11,6 @@ namespace kur2
        public string password;
        public string mail;
        public int id;
+       public Nullable<int> favorites;
     }
 }
