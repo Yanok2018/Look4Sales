@@ -22,14 +22,6 @@ namespace kur2
                     nu.password = u.Password;
                     nu.favorites = u.Favorites;
                     newusers.Add(nu);
-                    /** if (nu.favorites == null && u.Favorites == null)
-                    {
-                        Console.WriteLine($"{u.UserId} {u.Email} {u.Password} {"Нету избранных товаров"}");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"{u.UserId} {u.Email} {u.Password} {u.Favorites}");
-                    }*/
                     Console.WriteLine($"{u.UserId} {u.Email} {u.Password} {u.Favorites}");
                 }
 
@@ -90,14 +82,16 @@ namespace kur2
             ///   m.AddUsers("test4", "111");
             ///   m.AddUsers("test5", "111");
             ///   m.AddUsers("test6", "111");
-            m.AddUsers("test8", "111", null);
-            Console.WriteLine("Add site");
-            m.AddSites("httprf");
-            m.AddSites("htt2");
-            Console.WriteLine("Add product");
-            m.AddProducts("Phone", "Test", 1000,1);
-            Console.WriteLine("Del user");
-          //  m.DeleteUser("test5");
+            //   m.AddUsers("test8", "111", null);
+            //  Console.WriteLine("Add site");
+            //  m.AddSites("httprf");
+            //  m.AddSites("htt2");
+            //  Console.WriteLine("Add product");
+            //  m.AddProducts("Phone", "Test", 1000,1);
+            //  Console.WriteLine("Del user");
+            //  m.DeleteUser("test5");
+            m.ReductUserEmail("test9", "test8");
+
         }
     }
 }

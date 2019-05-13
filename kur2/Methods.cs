@@ -156,10 +156,16 @@ namespace kur2
         {
             using (CourseworkEntities6 db = new CourseworkEntities6())
             {
-                User u1 = db.Users.Select(a => a).Where(a => a.Email == mail).First();
-                if (u1 != null)
+                try
                 {
-                    if (db.Users.Select(a => a).Where(a => a.Email == mail2).First() == null)
+                    db.Users.Select(a => a).Where(a => a.Email == mail2).First();
+                    Console.WriteLine("Эта почта уже используетса");
+
+                }
+                catch (Exception)
+                {
+                User u1 = db.Users.Select(a => a).Where(a => a.Email == mail).First();
+                    if (u1 != null)
                     {
                         u1.Email = mail2;
                         db.SaveChanges();
@@ -171,15 +177,11 @@ namespace kur2
                     }
                     else
                     {
-                        Console.WriteLine("Эта почта уже используетса");
-                    }
+                        Console.WriteLine("Почта не найдена");
+                    }              
                 }
-                else
-                {
-                  Console.WriteLine("Почта не найдена");
                 }
             }
         }
 
-    }
 }
