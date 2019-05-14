@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using HtmlAgilityPack;
 
 namespace kur2
 {
@@ -10,8 +13,16 @@ namespace kur2
     {
         static void Main(string[] args)
         {
+           //////////////////////////////////////////////// 
+                //sd.SendMessege("Удачи","supernikd@gmail.com");
+
+            ///////////////////////////////////
             using (CourseworkEntities6 db = new CourseworkEntities6())
             {
+                    Dig dig = new Dig();
+                /// dig.GetItemsFox();
+                dig.GetItemsRoz();
+
                 List<NewUser> newusers = new List<NewUser>();
                 var users = db.Users;
                 foreach (User u in users)
@@ -24,7 +35,6 @@ namespace kur2
                     newusers.Add(nu);
                     Console.WriteLine($"{u.UserId} {u.Email} {u.Password} {u.Favorites}");
                 }
-
                 List<NewProduct> newproduct = new List<NewProduct>();
                 var products = db.Products;
                 foreach (Product p in products)
@@ -83,14 +93,15 @@ namespace kur2
             ///   m.AddUsers("test5", "111");
             ///   m.AddUsers("test6", "111");
             //   m.AddUsers("test8", "111", null);
-            //  Console.WriteLine("Add site");
-            //  m.AddSites("httprf");
-            //  m.AddSites("htt2");
+                //////   Console.WriteLine("Add site");
+                ////// m.AddSites("https://rozetka.com.ua");
+                ////// m.AddSites("https://www.foxtrot.com.ua");
+                ////// //  m.AddSites("htt2");
             //  Console.WriteLine("Add product");
             //  m.AddProducts("Phone", "Test", 1000,1);
             //  Console.WriteLine("Del user");
             //  m.DeleteUser("test5");
-            m.ReductUserEmail("test9", "test8");
+          //  m.ReductUserEmail("test9", "test8");
 
         }
     }

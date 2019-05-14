@@ -59,11 +59,11 @@ namespace kur2
                 db.Products.Add(p);
                 db.SaveChanges();
 
-               var products = db.Products.ToList();
-               foreach (Product pr in products)
-               {
-                Console.WriteLine($"{pr.ProductId} {pr.NameProduct} {pr.Description} {pr.Cost} {pr.SiteId}");
-               }
+               //var products = db.Products.ToList();
+               //foreach (Product pr in products)
+               //{
+               // Console.WriteLine($"{pr.ProductId} {pr.NameProduct} {pr.Description} {pr.Cost} {pr.SiteId}");
+               //}
             }
 
         }
