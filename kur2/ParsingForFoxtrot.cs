@@ -123,16 +123,7 @@ namespace kur2
             List<string> classes = new List<string>() {
                 "https://www.foxtrot.com.ua/ru/shop/processori.html?page=1",
                 "https://www.foxtrot.com.ua/ru/shop/materinskie_plati.html?page=1",
-                "https://www.foxtrot.com.ua/ru/shop/videokarti.html?page=1",
-                "https://www.foxtrot.com.ua/ru/shop/moduli_pamiati.html?page=1",
-                "https://www.foxtrot.com.ua/ru/shop/moduli_pamiati.html?page=1",
-                "https://www.foxtrot.com.ua/ru/shop/zhestkie_diski_ssd.html?page=1",
-                "https://www.foxtrot.com.ua/ru/shop/privody_cd_dvd.html?page=1",
-                "https://www.foxtrot.com.ua/ru/shop/bloki_pytania.html?page=1",
-                "https://www.foxtrot.com.ua/ru/shop/korpusi_komputernie.html?page=1",
-                "https://www.foxtrot.com.ua/ru/shop/ventiliatori_dlia_korpusa.html?page=1",
-                "https://www.foxtrot.com.ua/ru/shop/ventiliatori_dlia_korpusa.html?page=1",
-                "https://www.foxtrot.com.ua/ru/shop/zvukovie_karti.html?page=1" };
+                "https://www.foxtrot.com.ua/ru/shop/videokarti.html?page=1" };
             return classes;
         }
 

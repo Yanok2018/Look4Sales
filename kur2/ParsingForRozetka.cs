@@ -119,8 +119,9 @@ namespace kur2
         public List<string> GetNewClasses()
         {
             List<string> classes = new List<string>() {
-                "https://hard.rozetka.com.ua/ua/processors/c80083/",
-                "https://hard.rozetka.com.ua/ua/videocards/c80087/",
+              //  "https://hard.rozetka.com.ua/ua/processors/c80083/",
+              //  "https://hard.rozetka.com.ua/ua/videocards/c80087/",
+                "https://hard.rozetka.com.ua/ua/cases/c80090/",
                 };
             return classes;
         }
